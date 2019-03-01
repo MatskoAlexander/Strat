@@ -182,7 +182,8 @@ def bad_harvest(new_seeds):
     if rnd == 1:
         new_seeds = int(new_seeds * (random.randint(50, 70)) / 100)
         print("\nВас постиг неурожай.")
-    print("\nВы собрали {} зерна.".format(new_seeds))
+    if new_seeds != 0:
+        print("\nВы собрали {} зерна.".format(new_seeds))
     return new_seeds
 
 
