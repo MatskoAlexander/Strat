@@ -223,7 +223,7 @@ def suddenly_attacked(population, money, territory, distemper, army):
                 distemper = 0
             dead_army = int(army * (win_chance + random.randint(3, 14) / 100))
             new_population = random.randint(50, 300)
-            get_money = random.randint(1500, 5000)
+            get_money = random.randint(4000, 9000)
             if army - dead_army < 0:
                 dead_army = army
                 army = 0
@@ -279,7 +279,7 @@ def suddenly_attacked(population, money, territory, distemper, army):
 def many_rats(seeds):
     rnd = random.randint(1, 20)
     if rnd == 1:
-        lost_seeds = int(seeds * random.randint(3, 5) / 10)
+        lost_seeds = int(seeds * random.randint(30, 50) / 100)
         seeds = seeds - lost_seeds
         print("\nВ амбарах развелись крысы. Вы потеряли: {} зерно.".format(lost_seeds))
     return seeds
@@ -443,7 +443,7 @@ while POPULATION > 0 and DISTEMPER <= 0.65 and ARMY_DISTEMPER <= 0.5 and TERRITO
 
     SEEDS = many_rats(SEEDS)
 
-    DISTEMPER = revolution(DISTEMPER)
+    DISTEMPER = int(revolution(DISTEMPER) * 100) / 100
     if end(POPULATION, DISTEMPER, TERRITORY, ARMY_DISTEMPER) == 1:
         break
 
