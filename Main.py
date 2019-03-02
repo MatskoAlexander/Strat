@@ -205,7 +205,7 @@ def suddenly_attacked(population, money, territory, distemper, army):
                                 "Если она сработает, мы выиграем эту войну абсолютно без потерь\n"
                                 "(вероятность победы в таком случае будет равняться двадцати процентам)."
                                 "\nНо если проиграем, то потери будут невосполнимыми\n1)Да\n2)Нет\n"))
-    if new_tactic == "1" or new_tactic.lower() == 'Да':
+    if new_tactic == "1" or new_tactic.lower() == 'да':
         win_chance = 0.2
         check = 0.2
     if win_chance*100 <= win:
